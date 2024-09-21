@@ -38,7 +38,7 @@ export default function Hero() {
                             </h1>
                             <div className='lg:ml-14'>
                                 <h2 className="text-lg sm:text-2xl md:text-3xl font-semibold mb-2">
-                                <span className='text-[#fff700]'>Clases de fitness</span> diseñadas para la comunidad latina
+                                <span className='text-[#FFD700]'>Clases de fitness</span> diseñadas para la comunidad latina
                                 </h2>
                                 <p className="text-base sm:text-lg md:text-xl mb-6">
                                 Únete a nuestras clases y empieza tu jornada de salud y bienestar con la mejor instructora.
