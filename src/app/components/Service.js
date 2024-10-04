@@ -17,13 +17,15 @@ const Service = () => {
       { threshold: 0.4 } // Activar cuando el 70% del componente esté visible
     );
     
-    if (serviceRef.current) {
-      observer.observe(serviceRef.current);
+    const currentRef = serviceRef.current;  // Capturar el valor actual de serviceRef
+  
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (serviceRef.current) {
-        observer.unobserve(serviceRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);  // Usar la variable capturada para el cleanup
       }
     };
   }, []);

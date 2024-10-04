@@ -5,7 +5,7 @@ import { FaDumbbell, FaRunning, FaHeartbeat, FaChalkboardTeacher, FaMobileAlt, F
 
 const PlansSection = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
+  const plansectionRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -19,19 +19,21 @@ const PlansSection = () => {
       { threshold: 0.7 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentRef = plansectionRef.current;  // Capturar el valor actual de serviceRef
+  
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);  // Usar la variable capturada para el cleanup
       }
     };
   }, []);
 
   return (
-    <section className="w-auto lg:w-9/12 mx-auto mt-12" ref={sectionRef}>
+    <section className="w-auto lg:w-9/12 mx-auto mt-12" ref={plansectionRef}>
       {/* Título y subtítulo de introducción */}
       <div className={`price-hidden  text-center mb-12 ${isVisible ? 'price-fade-in' : ''}`}>
         <h2 className="text-4xl font-bold text-yellow-400 font-[family-name:var(--font-Milker-Regular)] italic">Planes de Entrenamiento Personal</h2>

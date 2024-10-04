@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-container footer-mx-auto footer-text-center">
         {/* Información básica */}
         <div className="footer-mb-4">
-          <p>2024 Caster Team. No pain no gain.</p>
+          <p>2024 Caster Team. &quot;No pain no gain&quot;.</p>
           <p>Desarrollado con ❤️ por <a href='#' className=' text-purple-950 font-semibold'>@codemallow</a></p>
         </div>
 

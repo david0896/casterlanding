@@ -136,7 +136,7 @@ const AboutMe = () => {
         <FaAward className="mx-auto text-4xl text-yellow-400 mb-4 aboutme-icon" />
         <h3 className="text-2xl font-semibold">Reconocimientos</h3>
         <p className="text-md mt-2">
-          Premio "Entrenadora del Año 2022". Embajadora fitness internacional.
+          Premio &quot;Entrenadora del Año 2022&quot;. Embajadora fitness internacional.
         </p>
       </div>
 

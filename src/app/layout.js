@@ -1,3 +1,5 @@
+// eslint-disable-next-line @next/next/no-img-element
+
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "../app/components/Navbar"

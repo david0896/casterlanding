@@ -257,7 +257,7 @@ export default function Navbar() {
               isFading ? "opacity-0" : "opacity-100"
             }`}
           >
-            {frasesGym[currentFrase]}
+            &quot;{frasesGym[currentFrase]}&quot;
           </p>
         </div>
       </div>

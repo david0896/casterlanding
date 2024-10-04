@@ -23,13 +23,15 @@ const ContactMe = () => {
       { threshold: 0.4 } // Se activa cuando el 40% del componente es visible
     );
 
-    if (contactRef.current) {
-      observer.observe(contactRef.current);
+    const currentRef = contactRef.current;  // Capturar el valor actual de serviceRef
+  
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (contactRef.current) {
-        observer.unobserve(contactRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);  // Usar la variable capturada para el cleanup
       }
     };
   }, []);
