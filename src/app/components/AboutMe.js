@@ -115,10 +115,10 @@ const AboutMe = () => {
     {/* Encabezado principal */}
     <div className="text-center mb-8">
       <h2 className="text-4xl font-bold mb-2 aboutme-title font-[family-name:var(--font-Milker-Regular)] italic">
-        Conoce a <span className="text-yellow-500">Flor Caster</span>
+        Conoce a <span className="text-yellow-400">Flor Caster</span>
       </h2>
       <p className="text-xl font-light">
-        Entrenadora fitness con +10 años de experiencia
+        Entrenadora fitness con +10 años de experiencia.
       </p>
     </div>
 

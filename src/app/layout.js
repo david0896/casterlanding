@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "../app/components/Navbar"
+import Footer from "./components/Footer";
 
 const montserratWght = localFont({
   src: "./fonts/MontserratWght.woff2",
@@ -25,7 +26,7 @@ export default function RootLayout({ children }) {
       <body className={`${montserratWght.variable} ${milkerRegular.variable} antialiased`}>
         <Navbar />
         {children}
-        {/* Footer goes here */}
+        <Footer />
       </body>
     </html>
   );

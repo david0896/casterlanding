@@ -328,3 +328,268 @@ video {
   transition: transform 0.3s ease-in-out;
 }
 
+/************************Plan section***********************************/
+
+.price-hidden {
+  opacity: 0; /* Mantiene los elementos ocultos inicialmente */
+  visibility: hidden;
+}
+
+/* Animaciones de entrada */
+@keyframes priceFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Movimiento hacia arriba */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Entra en su posición final */
+  }
+}
+
+@keyframes priceSlideIn {
+  0%  {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Clases personalizadas */
+.price-fade-in {
+  opacity: 0;
+  animation: priceFadeIn 1.2s ease-out forwards;
+  visibility: visible;
+}
+
+.price-slide-in {
+  opacity: 0;
+  animation: priceSlideIn 1.2s ease-out forwards;
+  visibility: visible;
+}
+
+/* Tarjetas */
+.price-card {
+  transition: all 0.3s ease-in-out;
+  height: auto;
+  max-width: 100%;
+  background: linear-gradient(170deg, rgb(84, 84, 84) 10%, rgb(37, 37, 37) 20%, black 50%);/* Degradado */
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra */
+  padding: 20px;
+}
+
+/* Tarjeta Premium más grande */
+.price-premium {
+  transform: scale(1.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Mejoras responsivas */
+@media (min-width: 768px) {
+  .price-card {
+    max-width: 350px;
+  }
+
+  .price-premium {
+    max-width: 400px;
+  }
+  
+}
+
+/* Iconos y lista */
+.price-card ul li {
+  display: flex;
+  align-items: center;
+}
+
+.price-card ul li svg {
+  margin-right: 8px;
+}
+
+/*********************Testimony******************************/
+
+.carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.carousel-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 350px;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 16%; /* 5 tarjetas visibles */
+  margin: 0 15px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-item h3,
+.carousel-item p {
+  margin: 0.5rem 0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .carousel-item {
+    min-width: 45%; /* Muestra 2 tarjetas en móvil */
+  }
+}
+
+/*******************ContactMe**********************************/
+
+@keyframes contactFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Movimiento hacia arriba */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Entra en su posición final */
+  }
+}
+
+.contact-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.contact-animate-fadeIn {
+  opacity: 0;
+  animation: contactFadeIn 1s forwards;
+  visibility: visible; /* Se muestra solo al iniciar la animación */
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid #ddd;
+  padding: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-bottom-color: #333;
+}
+
+.contact-button {
+  background-color: #FFD700;
+  color: #000;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #ffe65b;
+}
+
+.contact-button:focus {
+  outline: none;
+}
+
+/******footer*******/
+
+.footer-bg-gray-100 {
+  background-color: #f7f7f7; /* Gris claro */
+}
+
+.footer-text-gray-600 {
+  color: #6b7280; /* Texto gris */
+}
+
+.footer-text-gray-900 {
+  color: #1f2937; /* Texto más oscuro al hover */
+}
+
+.footer-py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-text-center {
+  text-align: center;
+}
+
+.footer-mb-4 {
+  margin-bottom: 1rem;
+}
+
+.footer-flex {
+  display: flex;
+}
+
+.footer-justify-center {
+  justify-content: center;
+}
+
+.footer-space-x-6 > * + * {
+  margin-left: 1.5rem; /* Espaciado entre íconos */
+}
+
+footer a {
+  color: #6b7280; /* Color de los íconos */
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #1f2937; /* Color más oscuro al pasar el cursor */
+}
