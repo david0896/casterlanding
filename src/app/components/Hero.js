@@ -48,9 +48,9 @@ export default function Hero() {
                                     Descubre nuestros planes
                                   </a>
                                   <div className="pulse-container">
-                                    <div className="pulse pulse--1"></div>
-                                    <div className="pulse pulse--2"></div>
-                                    <div className="pulse pulse--3"></div>
+                                    <div className="hidden lg:flex pulse pulse--1"></div>
+                                    <div className="hidden lg:flex pulse pulse--2"></div>
+                                    <div className="hidden lg:flex pulse pulse--3"></div>
                                   </div>
                                 </div>
                             </div>

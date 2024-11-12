@@ -43,69 +43,6 @@ export default function Navbar() {
         {/* Logo */}
         <a href="/" className="text-2xl font-bold font-[family-name:var(--font-Milker-Regular)]">Caster Team</a>
 
-        {/* Redes Sociales */}
-          <div className="hidden lg:flex items-center space-x-4">
-            {/* Facebook */}
-            <div className="relative group">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-2xl text-white hover:text-[#ffe65b] transition-colors duration-300"
-              >
-                <FaFacebookF />
-              </a>
-              <span className="tooltip group-hover:opacity-100 absolute invisible group-hover:visible transition-opacity duration-300">
-                Visítanos en Facebook
-              </span>
-            </div>
-
-            {/* Instagram */}
-            <div className="relative group">
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-2xl text-white hover:text-[#ffe65b] transition-colors duration-300"
-              >
-                <FaInstagram />
-              </a>
-              <span className="tooltip group-hover:opacity-100 absolute invisible group-hover:visible transition-opacity duration-300">
-                Síguenos en Instagram
-              </span>
-            </div>
-
-            {/* TikTok */}
-            <div className="relative group">
-              <a
-                href="https://tiktok.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-2xl text-white hover:text-[#ffe65b] transition-colors duration-300"
-              >
-                <FaTiktok />
-              </a>
-              <span className="tooltip group-hover:opacity-100 absolute invisible group-hover:visible transition-opacity duration-300">
-                Mira nuestro TikTok
-              </span>
-            </div>
-
-            {/* WhatsApp */}
-            <div className="relative group">
-              <a
-                href="https://wa.me/123456789"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-2xl text-white hover:text-[#ffe65b] transition-colors duration-300"
-              >
-                <FaWhatsapp />
-              </a>
-              <span className="tooltip group-hover:opacity-100 absolute invisible group-hover:visible transition-opacity duration-300">
-                Contáctanos en WhatsApp
-              </span>
-            </div>
-          </div>
-
         {/* Menu Toggle (Visible en todas las resoluciones) */}
         <button
           className="text-3xl hover:text-[#ffe65b] transition-colors duration-300"
