@@ -8,7 +8,7 @@ const Footer = () => {
         {/* Información básica */}
         <div className="footer-mb-4">
           <p>2024 Caster Team. &quot;No pain no gain&quot;.</p>
-          <p>Desarrollado con ❤️ por <a href='#' className=' text-purple-950 font-semibold'>@codemallow</a></p>
+          <p>Desarrollado con ❤️ por <a href='https://www.instagram.com/codemallow/' className=' text-purple-950 font-semibold'>@codemallow</a></p>
         </div>
 
         {/* Redes sociales */}

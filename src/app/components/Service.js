@@ -30,6 +30,18 @@ const Service = () => {
     };
   }, []);
 
+  const handleScroll = (e) => {
+    e.preventDefault();
+    const destination = document.getElementById("servicePlan");
+    const offset = 50; // Ajuste para el navbar
+    const topPosition = destination.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({
+      top: topPosition,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section ref={serviceRef} className="bg-white w-9/12 mx-auto mt-12 mb-14">
       <div className="grid grid-cols-6 gap-6">
@@ -48,9 +60,9 @@ const Service = () => {
                 />
             </div>
             <div className="relative flex justify-center lg:justify-start mt-8 mb-5">
-                <a href="#planes-de-pago" className="cta-button">
+                <button className="cta-button" onClick={handleScroll}>
                 Descubre nuestros planes
-                </a>
+                </button>
                 <div className="pulse-container">
                     <div className="hidden lg:flex  pulse pulse--1"></div>
                     <div className="hidden lg:flex pulse pulse--2"></div>

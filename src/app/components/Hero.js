@@ -1,8 +1,22 @@
+"use client";
+
 // app/components/Hero.js
 import Image from 'next/image';
 import SvgComponent from './SvgComponent';
 
 export default function Hero() {
+  const handleScroll = (e) => {
+    e.preventDefault();
+    const destination = document.getElementById("servicePlan");
+    const offset = 50; // Ajuste para el navbar
+    const topPosition = destination.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({
+      top: topPosition,
+      behavior: "smooth",
+    });
+  };
+
     return (
         <section className="relative w-full min-h-screen bg-cover bg-center bg-gray-900">
             <video
@@ -44,9 +58,9 @@ export default function Hero() {
                                 Únete a nuestras clases y empieza tu jornada de salud y bienestar con la mejor instructora.
                                 </p>
                                 <div className="relative flex justify-center lg:justify-start">
-                                  <a href="#planes-de-pago" className="cta-button">
+                                  <button className="cta-button" onClick={handleScroll}>
                                     Descubre nuestros planes
-                                  </a>
+                                  </button>
                                   <div className="pulse-container">
                                     <div className="hidden lg:flex pulse pulse--1"></div>
                                     <div className="hidden lg:flex pulse pulse--2"></div>

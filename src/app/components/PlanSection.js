@@ -33,7 +33,7 @@ const PlansSection = () => {
   }, []);
 
   return (
-    <div className='w-fill-available'>
+    <div className='w-fill-available' id='servicePlan'>
       <div className="w-9/12 mx-auto mt-12" ref={plansectionRef}>
         {/* Título y subtítulo de introducción */}
         <div className={`price-hidden  text-center mb-12 ${isVisible ? 'price-fade-in' : ''}`}>
@@ -99,7 +99,7 @@ const PlansSection = () => {
       </div>
 
       {/* Carrusel en versión móvil */}
-      <div className="lg:hidden overflow-x-auto snap-x snap-mandatory flex space-x-4 py-8 px-8 lg:overflow-visible lg:flex-row lg:justify-center">
+      <div className="lg:hidden overflow-x-auto snap-x snap-mandatory flex space-x-4 pb-8 px-8 lg:overflow-visible lg:flex-row lg:justify-center">
         {/* Plan Básico */}
         <div className="snap-center flex-shrink-0 min-w-[85%] max-w-[85%] lg:min-w-0 lg:max-w-none price-card bg-black bg-opacity-60 rounded-lg shadow-lg p-6 text-white flex flex-col items-center">
           <h3 className="text-3xl font-semibold text-yellow-400 mb-4">Plan Básico</h3>
