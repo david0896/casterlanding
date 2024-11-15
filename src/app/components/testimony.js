@@ -42,8 +42,22 @@ const testimonies = [
 
 const TestimonyCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false); // Estado para rastrear si es mobile
 
-  const isMobile = window.innerWidth <= 768;
+  useEffect(() => {
+    // Función para verificar si es mobile
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Ejecutar la verificación inicial y agregar listener
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    // Limpieza del listener al desmontar
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const visibleCards = isMobile ? 1 : 5;
   const cardWidthPercentage = 100 / visibleCards;
 
@@ -58,9 +72,10 @@ const TestimonyCarousel = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonies.length);
   };
 
+
   return (
     <section className="testimony-carousel-container">
-      <h2 className="text-3xl lg:text-4xl italic font-bold text-yellow-400 mt-12 mb-4 font-[family-name:var(--font-Milker-Regular)]">Lo que dicen mis clientes</h2>
+      <h2 className="text-3xl lg:text-4xl italic font-bold text-yellow-400 mt-8 lg:mt-12 mb-4 font-[family-name:var(--font-Milker-Regular)]">Lo que dicen mis clientes</h2>
         <p className="text-lg text-gray-600 mb-10">
             Clientes satisfechos que han visto resultados con los entrenamientos online.
         </p>

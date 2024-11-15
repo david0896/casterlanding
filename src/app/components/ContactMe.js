@@ -71,9 +71,9 @@ const ContactMe = () => {
   }; */
 
   return (
-    <section ref={contactRef} className="bg-white w-9/12 mx-auto -mt-10 mb-14">
+    <section ref={contactRef} className="bg-white w-9/12 mx-auto -mt-5 mb-14">
       <div className="text-center mb-8">
-        <h2 className={`text-3xl lg:text-4xl italic font-bold ${isVisible ? 'contact-animate-fadeIn' : 'contact-hidden'} text-yellow-400 mt-12 mb-4 font-[family-name:var(--font-Milker-Regular)]`}>
+        <h2 className={`text-3xl lg:text-4xl italic font-bold ${isVisible ? 'contact-animate-fadeIn' : 'contact-hidden'} text-yellow-400 mt-8 lg:mt-12 mb-4 font-[family-name:var(--font-Milker-Regular)]`}>
           Contáctame
         </h2>
         <p className={`text-lg text-gray-600 ${isVisible ? 'contact-animate-fadeIn' : 'contact-hidden'}`}>
