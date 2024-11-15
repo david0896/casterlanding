@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect } from 'react';
 import { FaDumbbell, FaAward, FaHeartbeat, FaBullseye, FaEye } from 'react-icons/fa';
 
@@ -12,7 +13,7 @@ const AboutMe = () => {
   }, []);
 
   return (
-<section className="aboutme-section relative w-full h-[800px] overflow-hidden">
+<section className="aboutme-section relative w-full h-full lg:h-[830px] overflow-hidden">
   {/* Contenedor de las imágenes animadas */}
   <div className="aboutme-bg absolute inset-0 w-full h-full overflow-hidden">
     <div className="aboutme-bg-grid grid grid-cols-12 gap-2">
@@ -114,12 +115,18 @@ const AboutMe = () => {
   >
     {/* Encabezado principal */}
     <div className="text-center mb-8">
-      <h2 className="text-4xl font-bold mb-2 aboutme-title font-[family-name:var(--font-Milker-Regular)] italic">
+      <h2 className="text-3xl lg:text-4xl font-bold mb-2 aboutme-title font-[family-name:var(--font-Milker-Regular)] italic">
         Conoce a <span className="text-yellow-400">Flor Caster</span>
       </h2>
       <p className="text-xl font-light">
         Entrenadora fitness con +10 años de experiencia.
       </p>
+      {/* Llamado a la acción */}
+      <div className="text-center my-12 block lg:hidden">
+        <Link href="#" className="px-6 py-3 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-600 transition-all">
+          ¡Empieza tu transformación ahora!
+        </Link>
+      </div>
     </div>
 
     {/* Tarjetas */}
@@ -152,7 +159,7 @@ const AboutMe = () => {
     {/* Sección de Mi Motivación, Misión y Visión */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
       <div className="space-y-6">
-        <div>
+        <div className=' mb-10 text-center lg:text-left'>
           <h3 className="text-3xl font-semibold mb-4 text-yellow-400">
             Mi motivación
           </h3>
@@ -160,11 +167,17 @@ const AboutMe = () => {
             Ayudar a las personas a descubrir su mejor versión. Crear hábitos
             saludables para toda la vida, no solo a corto plazo.
           </p>
+          {/* Llamado a la acción */}
+          <div className="text-center my-12 block lg:hidden">
+            <Link href="#" className="px-6 py-3 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-600 transition-all">
+              ¡Empieza tu transformación ahora!
+            </Link>
+          </div>
         </div>
 
-        <div className="flex space-x-6">
+        <div className="block lg:flex space-y-6 lg:space-y-0 lg:space-x-6">
           {/* Misión */}
-          <div className="bg-black bg-opacity-70 rounded-lg p-6 shadow-lg text-center flex flex-col items-center justify-center w-1/2 aboutme-card">
+          <div className="bg-black bg-opacity-70 rounded-lg p-6 shadow-lg text-center flex flex-col items-center justify-center w-full lg:w-1/2 aboutme-card">
             <h3 className="text-3xl font-bold text-yellow-400 mb-2">Misión</h3>
             <p className="text-md text-center mb-4">
               Transformar vidas a través del fitness, ofreciendo programas
@@ -174,7 +187,7 @@ const AboutMe = () => {
           </div>
 
           {/* Visión */}
-          <div className="bg-black bg-opacity-70 rounded-lg p-6 shadow-lg text-center flex flex-col items-center justify-center w-1/2 aboutme-card">
+          <div className="bg-black bg-opacity-70 rounded-lg p-6 shadow-lg text-center flex flex-col items-center justify-center w-full lg:w-1/2 aboutme-card">
             <h3 className="text-3xl font-bold text-yellow-400 mb-2">Visión</h3>
             <p className="text-md text-center mb-4">
               Ser líder en el mundo del fitness, inspirando a miles de personas
@@ -186,7 +199,7 @@ const AboutMe = () => {
       </div>
 
       {/* Imagen principal */}
-      <div className="overflow-hidden h-[800px]">
+      <div className="overflow-hidden h-[300px] lg:h-[800px] -mb-12 lg:mb-0">
         <img
           src="https://lapaulettefitness.com/wp-content/uploads/elementor/thumbs/footer-pmj2lzreop9d3wf5pgea6jfdu7zkvm3uctihr6zmrk.png"
           alt="Flor Caster Training"
@@ -197,10 +210,10 @@ const AboutMe = () => {
     </div>
 
     {/* Llamado a la acción */}
-    <div className="text-center mt-12">
-      <button className="px-6 py-3 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-600 transition-all">
+    <div className="text-center mt-12 block lg:hidden">
+      <Link href="#" className="px-6 py-3 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-600 transition-all">
         ¡Empieza tu transformación ahora!
-      </button>
+      </Link>
     </div>
   </div>
 </section>

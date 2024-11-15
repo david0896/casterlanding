@@ -35,7 +35,7 @@ const Service = () => {
       <div className="grid grid-cols-6 gap-6">
         {/* Columna Título y Subtítulo */}
         <div className={`col-span-6 md:col-span-2 text-center md:text-left ${isVisible ? 'service-animate-fadeIn' : 'service-hidden'}`} style={{ animationDelay: '0ms' }}>
-            <h2 className="text-4xl italic font-bold text-gray-900 mb-4 font-[family-name:var(--font-Milker-Regular)]">Servicios</h2>
+            <h2 className="text-3xl lg:text-4xl italic font-bold text-gray-900 mb-4 font-[family-name:var(--font-Milker-Regular)]">Servicios</h2>
             <p className="text-lg text-gray-600 mb-8">
                 Entrenamientos personalizados que transformarán tu cuerpo y mente. Vive una experiencia única con Caster Team.
             </p>

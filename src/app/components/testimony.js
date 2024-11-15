@@ -42,52 +42,48 @@ const testimonies = [
 
 const TestimonyCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false); // Estado para pausar la animación
 
-  const cardWidthPercentage = 20; // 5 tarjetas visibles, 20% cada una
+  const isMobile = window.innerWidth <= 768;
+  const visibleCards = isMobile ? 1 : 5;
+  const cardWidthPercentage = 100 / visibleCards;
 
   useEffect(() => {
-    let interval;
-    if (!isPaused) {
-      interval = setInterval(() => {
-        goToNext();
-      }, 3000); // Cambia de tarjeta cada 3 segundos
-    }
+    const interval = setInterval(() => {
+      goToNext();
+    }, 3000); // Cambia cada 3 segundos
     return () => clearInterval(interval);
-  }, [currentIndex, isPaused]);
+  }, [currentIndex]);
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === testimonies.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonies.length);
   };
 
   return (
-    <section className="carousel-container">
-        <h2 className="text-4xl italic font-bold text-yellow-400 mt-12 mb-4 font-[family-name:var(--font-Milker-Regular)]">Lo que dicen mis clientes</h2>
-        <p className="text-lg text-gray-600">
+    <section className="testimony-carousel-container">
+      <h2 className="text-3xl lg:text-4xl italic font-bold text-yellow-400 mt-12 mb-4 font-[family-name:var(--font-Milker-Regular)]">Lo que dicen mis clientes</h2>
+        <p className="text-lg text-gray-600 mb-10">
             Clientes satisfechos que han visto resultados con los entrenamientos online.
         </p>
+      <div className="testimony-carousel-wrapper">
         <div
-            className="carousel-wrapper"
-            onMouseEnter={() => setIsPaused(true)} // Pausar al poner el cursor
-            onMouseLeave={() => setIsPaused(false)} // Reanudar al sacar el cursor
+          className="testimony-carousel-inner"
+          style={{
+            transform: `translateX(-${currentIndex * cardWidthPercentage}%)`,
+          }}
         >
-            <div className="carousel">
+          {[...testimonies, ...testimonies].map((item, index) => (
             <div
-                className="carousel-inner"
-                style={{ transform: `translateX(-${currentIndex * cardWidthPercentage}%)` }}
+              key={index}
+              className="testimony-carousel-item"
+              style={{ width: `${cardWidthPercentage}%` }}
             >
-                {[...testimonies, ...testimonies].map((item, index) => (
-                <div key={index} className="carousel-item">
-                    <img src={item.image} alt={item.name} />
-                    <h3>{item.name}</h3>
-                    <p>{item.text}</p>
-                </div>
-                ))}
+              <img src={item.image} alt={item.name} />
+              <h3>{item.name}</h3>
+              <p>{item.text}</p>
             </div>
-            </div>
+          ))}
         </div>
+      </div>
     </section>
   );
 };

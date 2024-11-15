@@ -29,7 +29,7 @@ export default function Hero() {
                 <div className='w-auto lg:w-9/12 mx-auto'>
                     <div className="container mx-auto px-6 lg:px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div className="text-white flex flex-col justify-center lg:items-center md:items-start text-left">
-                            <h1 className="text-2xl italic sm:text-4xl md:text-6xl font-bold mb-4 font-[family-name:var(--font-Milker-Regular)]">
+                            <h1 className="text-4xl italic sm:text-4xl md:text-6xl font-bold mb-4 font-[family-name:var(--font-Milker-Regular)]">
                                 Transforma 
                                 <span className='flex items-center lg:ml-10'>
                                     <SvgComponent className=" w-[70px] mr-4 mt-1"/>
