@@ -594,3 +594,25 @@ footer a {
 footer a:hover {
   color: #1f2937; /* Color más oscuro al pasar el cursor */
 }
+
+/******* modal  ********/
+
+.modal-panel {
+  position: relative; /* Para posicionar el contenido y capas internas */
+  background-image: url('https://i.postimg.cc/nrWKyGvj/plan-de-entrenamiento.jpg'); /* URL de la imagen de fondo */
+  background-size: cover; /* Asegura que la imagen cubra todo el área */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita repeticiones */
+  border-radius: 0.5rem; /* Ajusta los bordes redondeados */
+  overflow: hidden; /* Para evitar que el contenido se desborde */
+  background-color: rgba(0, 0, 0, 0.7); /* Negro con opacidad del 60% */
+  background-blend-mode: darken; /* Mezcla el color de fondo con la imagen */
+}
+
+.modal-open {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.modal-close {
+  animation: fadeOut 0.4s ease-in forwards;
+}

@@ -1,11 +1,17 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from 'react';
-import { FaDumbbell, FaRunning, FaHeartbeat, FaChalkboardTeacher, FaMobileAlt, FaCalendarCheck } from 'react-icons/fa';
+import { FaDumbbell, FaRunning, FaSwimmer, FaPray, FaHotjar, FaHeartbeat, FaChalkboardTeacher, FaMobileAlt, FaCalendarCheck } from 'react-icons/fa';
+import Modal from './Modal';
 
 const PlansSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const plansectionRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [planName, setPlanName] = useState("");
+  const [planData, setPlanData] = useState("");
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,6 +37,22 @@ const PlansSection = () => {
       }
     };
   }, []);
+
+  const dataBasico = [
+    { value: 20, name: 'Workout', icon: <FaDumbbell />, calories: 172, minutes: 20 },
+    { value: 40, name: 'Running', icon: <FaRunning />, calories: 120, minutes: 15 },
+    { value: 30, name: 'Swimming', icon: <FaSwimmer />, calories: 115, minutes: 25},
+    { value: 10, name: 'Yoga', icon: <FaPray />, calories: 90, minutes: 20 },
+    { value: 100, name: 'Total', icon: <FaHotjar />, calories: 0, minutes: 0 },
+  ];
+
+  const dataPremium = [
+    { value: 30, name: 'Workout', icon: <FaDumbbell />, calories: 190, minutes: 30 },
+    { value: 50, name: 'Running', icon: <FaRunning />, calories: 170, minutes: 25 },
+    { value: 10, name: 'Swimming', icon: <FaSwimmer />, calories: 90, minutes: 15},
+    { value: 10, name: 'Yoga', icon: <FaPray />, calories: 90, minutes: 20 },
+    { value: 100, name: 'Total', icon: <FaHotjar />, calories: 0, minutes: 0 },
+  ];
 
   return (
     <div className='w-fill-available' id='servicePlan'>
@@ -64,7 +86,7 @@ const PlansSection = () => {
               </li>
             </ul>
             <span className="text-4xl font-bold text-yellow-400 mb-4">$49,9/mes</span>
-            <button className="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-300 transition">
+            <button className="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-300 transition" onClick={() => {openModal(), setPlanName("Plan Básico"), setPlanData(dataBasico)}}>
               Comprar Plan Básico
             </button>
           </div>
@@ -91,7 +113,7 @@ const PlansSection = () => {
               </li>
             </ul>
             <span className="text-5xl font-bold text-yellow-400 mb-4">$99,9/mes</span>
-            <button className="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-300 transition">
+            <button className="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-300 transition" onClick={() => {openModal(), setPlanName("Plan Premium"), setPlanData(dataPremium)}}>
               Comprar Plan Premium
             </button>
           </div>
@@ -118,7 +140,7 @@ const PlansSection = () => {
             </li>
           </ul>
           <span className="text-4xl font-bold text-yellow-400 mb-4">$49,9/mes</span>
-          <button className="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-300 transition">
+          <button className="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-300 transition" onClick={() => {openModal(), setPlanName("Plan Básico"), setPlanData(dataBasico)}}>
             Comprar Plan Básico
           </button>
         </div>
@@ -133,7 +155,7 @@ const PlansSection = () => {
             <li className="flex items-center mb-2">
               <FaChalkboardTeacher className="text-yellow-400 mr-2" /> 2 sesiones semanales presenciales o virtuales
             </li>
-            <li className="flex items-center mb-2">
+            <li className="flex items-center mb-2 ">
               <FaMobileAlt className="text-yellow-400 mr-2" /> Soporte continuo por chat y llamadas
             </li>
             <li className="flex items-center mb-2">
@@ -144,11 +166,14 @@ const PlansSection = () => {
             </li>
           </ul>
           <span className="text-5xl font-bold text-yellow-400 mb-4">$99,9/mes</span>
-          <button className="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-300 transition">
+          <button className=" bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-300 transition" onClick={() => {openModal(), setPlanName("Plan Premium"), setPlanData(dataPremium)}}>
             Comprar Plan Premium
           </button>
         </div>
       </div>
+
+      {/* Modal */}
+      <Modal isOpen={isOpen} onClose={closeModal} planName={planName} data={planData}/>
 
     </div>
   );
