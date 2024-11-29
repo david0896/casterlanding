@@ -40,38 +40,46 @@ const EchartsDonut = ({ data }) => {
   });
 
   return (
-    <div className="flex gap-4 flex-wrap justify-center items-center mb-10">
-      {data.map((item, index) => (
-        <div
-          key={index}
-          className={`relative mb-10 lg:mb-0 ${
-            index === 4
-              ? 'h-[100px] w-[100px] lg:h-[150px] lg:w-[150px]'
-              : 'h-[80px] w-[90px] lg:h-[110px] lg:w-[110px]'
-          }`}
-        >
-          {/* Renderiza el gráfico */}
-          <ReactEcharts
-            option={generateOptions(item)}
-            style={{ height: '100%', width: '100%' }}
-          />
-          {/* Coloca el ícono en el centro del gráfico */}
-          <div className="absolute inset-0 flex items-center justify-center text-xl lg:text-2xl text-yellow-400">
-            {item.icon}
-          </div>
-          {/* Agrega el valor como texto debajo */}
-          <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 text-base font-medium text-white">
-            {item.name}
-          </span>
-          <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-normal text-white w-full">
-            {item.name == 'Total' ? "Calorias: -" + totalCalories : "Calorias: -" + item.calories}
-          </span>
-          <span className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 text-xs font-normal text-white w-full">
-            {item.name == 'Total' ? "Minutos: " + totalMinutes : "Minutos: " + item.minutes}
-          </span>
+    <div className="flex gap-2 lg:gap-4 flex-wrap justify-center items-center mb-6 lg:mb-10">
+  {data.map((item, index) => (
+    <div
+      key={index}
+      className={`relative flex items-center justify-center mb-6 lg:mb-0 ${
+        index === 4
+          ? 'h-[100px] w-[100px] lg:h-[150px] lg:w-[150px]'
+          : 'h-[80px] w-[80px] lg:h-[110px] lg:w-[110px]'
+      }`}
+    >
+      {/* Contenedor del gráfico */}
+      <div className="relative flex items-center justify-center w-full h-full">
+        <ReactEcharts
+          option={generateOptions(item)}
+          className="absolute w-full h-full"
+        />
+        {/* Icono centrado */}
+        <div className="absolute inset-0 flex items-center justify-center text-xl lg:text-2xl text-yellow-400">
+          {item.icon}
         </div>
-      ))}
+      </div>
+      {/* Textos inferiores */}
+      <span className="absolute bottom-[-15px] left-1/2 transform -translate-x-1/2 text-xs lg:text-base font-medium text-white">
+        {item.name}
+      </span>
+      <span className="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 text-[10px] lg:text-sm font-normal text-white w-full">
+        {item.name === 'Total'
+          ? `Calorías: -${totalCalories}`
+          : `Calorías: -${item.calories}`}
+      </span>
+      <span className="absolute bottom-[-45px] left-1/2 transform -translate-x-1/2 text-[9px] lg:text-xs font-normal text-white w-full">
+        {item.name === 'Total'
+          ? `Minutos: ${totalMinutes}`
+          : `Minutos: ${item.minutes}`}
+      </span>
     </div>
+  ))}
+</div>
+
+
   );
 };
 
