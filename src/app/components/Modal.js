@@ -15,7 +15,7 @@ const Modal = ({ isOpen, onClose, planName, data }) => {
   }`}
 >
       <div className="absolute inset-0 bg-black bg-opacity-90"></div>
-      <DialogPanel className="modal-panel relative bg-cover bg-center w-11/12 max-w-4xl px-5 py-20 text-center bg-black rounded-lg ">
+      <DialogPanel className="modal-panel relative bg-cover bg-center w-11/12 max-w-4xl px-2 lg:px-5 py-20 text-center bg-black rounded-lg ">
       <button
       onClick={onClose}
       className="absolute top-12 right-4 lg:top-2 lg:right-2 text-gray-500 hover:text-yellow-400"
@@ -32,7 +32,7 @@ const Modal = ({ isOpen, onClose, planName, data }) => {
           Tu cuerpo y mente están listos para el cambio. ¡Empieza hoy mismo!
         </p>
         <div className="flex justify-center">
-          <form className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 p-6 shadow-md rounded-md">
+          <form className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 p-6 shadow-md rounded-md w-full lg:w-auto">
             <input
               type="text"
               name="nombre"

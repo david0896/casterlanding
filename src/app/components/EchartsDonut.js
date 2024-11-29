@@ -44,8 +44,11 @@ const EchartsDonut = ({ data }) => {
       {data.map((item, index) => (
         <div
           key={index}
-          className="relative mb-8 lg:mb-0"
-          style={{ height: index === 4 ? '150px' : '110px', width: index === 4 ? '150px' : '110px'}}
+          className={`relative mb-10 lg:mb-0 ${
+            index === 4
+              ? 'h-[100px] w-[100px] lg:h-[150px] lg:w-[150px]'
+              : 'h-[80px] w-[90px] lg:h-[110px] lg:w-[110px]'
+          }`}
         >
           {/* Renderiza el gráfico */}
           <ReactEcharts
@@ -53,7 +56,7 @@ const EchartsDonut = ({ data }) => {
             style={{ height: '100%', width: '100%' }}
           />
           {/* Coloca el ícono en el centro del gráfico */}
-          <div className="absolute inset-0 flex items-center justify-center text-2xl text-yellow-400">
+          <div className="absolute inset-0 flex items-center justify-center text-xl lg:text-2xl text-yellow-400">
             {item.icon}
           </div>
           {/* Agrega el valor como texto debajo */}
