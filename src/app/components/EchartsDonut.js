@@ -54,7 +54,7 @@ const EchartsDonut = ({ data }) => {
       <div className="relative flex items-center justify-center w-full h-full">
         <ReactEcharts
           option={generateOptions(item)}
-          className="absolute w-full h-full"
+          className="w-full"
         />
         {/* Icono centrado */}
         <div className="absolute inset-0 flex items-center justify-center text-xl lg:text-2xl text-yellow-400">
