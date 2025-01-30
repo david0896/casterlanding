@@ -27,6 +27,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 /* Secction hero */
 
 video {
@@ -51,6 +52,21 @@ video {
 .cta-button {
   padding: 12px 24px;
   background-color: #FFD700;
+  width: 500px;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-buttonSecundario {
+  padding: 12px 24px;
+  background-color: #FFD700;
   width: 300px;
   color: #000;
   font-weight: bold;
@@ -69,6 +85,18 @@ video {
 }
 
 .pulse-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  z-index: 1;
+}
+
+.pulse-containerSecundario {
   position: absolute;
   top: 0;
   left: 0;
@@ -380,6 +408,17 @@ video {
   transition: all 0.3s ease-in-out;
   height: auto;
   max-width: 100%;
+  background: linear-gradient(170deg, rgb(84, 84, 84) 10%, rgb(37, 37, 37) 20%, black 50%);/* Degradado */
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra */
+  padding: 20px;
+}
+
+.price-cardEbook {
+  transition: all 0.3s ease-in-out;
+  height: auto;
+  max-width: 100%;
+  width: 20vw;
   background: linear-gradient(170deg, rgb(84, 84, 84) 10%, rgb(37, 37, 37) 20%, black 50%);/* Degradado */
   color: #fff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra */

@@ -25,19 +25,19 @@ const AboutMe = () => {
   };
 
   return (
-    <section className="aboutme-section relative w-full h-full lg:h-[830px] overflow-hidden">
+    <section className="aboutme-section relative w-full h-full lg:h-[930px] overflow-hidden">
       {/* Contenedor de las imágenes animadas */}
       <div className="aboutme-bg absolute inset-0 w-full h-full overflow-hidden">
         <div className="aboutme-bg-grid grid grid-cols-12 gap-2">
           {/* Columna 1: Imágenes animadas (izquierda) */}
           <div className="col-span-2 flex flex-col">
             <img
-              src="https://www.spinningcentergym.com/wp-content/uploads/2024/03/gimnasios-en-las-americas-spinning-center-gym_Body-pump-scaled.webp"
+              src="https://i.postimg.cc/hj0pQkb0/fitness-caster-team.jpg"
               alt="image1"
               className="aboutme-bg-image"
             />
             <img
-              src="https://www.spinningcentergym.com/wp-content/uploads/2024/06/IMG_5235-scaled.webp"
+              src="https://i.postimg.cc/6pDHkLpC/flor-caster-team.jpg"
               alt="image2"
               className="aboutme-bg-image"
             />
@@ -46,12 +46,12 @@ const AboutMe = () => {
           {/* Columna 2: Imágenes animadas (derecha, replicadas en distinto orden) */}
           <div className="col-span-2 flex flex-col">
             <img
-              src="https://www.spinningcentergym.com/wp-content/uploads/2024/06/IMG_3186-1-scaled.webp"
+              src="https://i.postimg.cc/TYsQbqmB/ejercicios-gym-fitness-caster-team.jpg"
               alt="image3"
               className="aboutme-bg-image"
             />
             <img
-              src="https://www.spinningcentergym.com/wp-content/uploads/2024/06/padelh.webp"
+              src="https://i.postimg.cc/QxC0VnBp/sesion-fitness-caster-team.jpg"
               alt="image4"
               className="aboutme-bg-image"
             />
@@ -60,12 +60,12 @@ const AboutMe = () => {
           {/* Columna 3: Imágenes animadas (derecha, replicadas en distinto orden) */}
           <div className="col-span-2 flex flex-col">
             <img
-              src="https://www.spinningcentergym.com/wp-content/uploads/2024/06/IMG_3186-1-scaled.webp"
+              src="https://i.postimg.cc/Hk7z9c9n/rutina-de-ejercicio-fitness-caster-team.jpg"
               alt="image3"
               className="aboutme-bg-image"
             />
             <img
-              src="https://www.spinningcentergym.com/wp-content/uploads/2024/06/padelh.webp"
+              src="https://i.postimg.cc/zBqkNdZH/entrenadora-personal-caster-team.png"
               alt="image4"
               className="aboutme-bg-image"
             />
@@ -74,12 +74,12 @@ const AboutMe = () => {
           {/* Columna 4: Imágenes animadas (derecha, replicadas en distinto orden) */}
           <div className="col-span-2 flex flex-col">
             <img
-              src="https://www.spinningcentergym.com/wp-content/uploads/2024/06/IMG_3186-1-scaled.webp"
+              src="https://i.postimg.cc/bvcTCymT/entrenadora-personal-caster-team.jpg"
               alt="image3"
               className="aboutme-bg-image"
             />
             <img
-              src="https://www.spinningcentergym.com/wp-content/uploads/2024/06/padelh.webp"
+              src="https://i.postimg.cc/x8CyJcd0/caster-team-rutina-de-pesas.png"
               alt="image4"
               className="aboutme-bg-image"
             />
@@ -88,12 +88,12 @@ const AboutMe = () => {
           {/* Columna 5: Imágenes animadas (derecha, replicadas en distinto orden) */}
           <div className="col-span-2 flex flex-col">
             <img
-              src="https://www.spinningcentergym.com/wp-content/uploads/2024/06/IMG_3186-1-scaled.webp"
+              src="https://i.postimg.cc/6pDHkLpC/flor-caster-team.jpg"
               alt="image3"
               className="aboutme-bg-image"
             />
             <img
-              src="https://www.spinningcentergym.com/wp-content/uploads/2024/06/padelh.webp"
+              src="https://i.postimg.cc/TYsQbqmB/ejercicios-gym-fitness-caster-team.jpg"
               alt="image4"
               className="aboutme-bg-image"
             />
@@ -102,12 +102,12 @@ const AboutMe = () => {
           {/* Columna 6: Imágenes animadas (derecha, replicadas en distinto orden) */}
           <div className="col-span-2 flex flex-col">
             <img
-              src="https://www.spinningcentergym.com/wp-content/uploads/2024/06/IMG_3186-1-scaled.webp"
+              src="https://i.postimg.cc/Hk7z9c9n/rutina-de-ejercicio-fitness-caster-team.jpg"
               alt="image3"
               className="aboutme-bg-image"
             />
             <img
-              src="https://www.spinningcentergym.com/wp-content/uploads/2024/06/padelh.webp"
+              src="https://i.postimg.cc/QxC0VnBp/sesion-fitness-caster-team.jpg"
               alt="image4"
               className="aboutme-bg-image"
             />
@@ -131,7 +131,7 @@ const AboutMe = () => {
             Conoce a <span className="text-yellow-400">Flor Caster</span>
           </h2>
           <p className="text-xl font-light">
-            Entrenadora fitness con +10 años de experiencia.
+            Entrenadora fitness con +4 años de experiencia.
           </p>
           {/* Llamado a la acción */}
           <div className="text-center my-12 block lg:hidden">
@@ -147,23 +147,24 @@ const AboutMe = () => {
             <FaDumbbell className="mx-auto text-4xl text-yellow-400 mb-4 aboutme-icon" />
             <h3 className="text-2xl font-semibold">Trayectoria</h3>
             <p className="text-md mt-2">
-              +10 años transformando vidas a través de entrenamientos personalizados.
+            He ayudado a más de 1500 personas a alcanzar no solo un cambio
+            físico, si no también mental y emocional
             </p>
           </div>
 
           <div className="text-center p-6 bg-black bg-opacity-70 rounded-lg shadow-lg aboutme-card h-full flex flex-col justify-between">
             <FaAward className="mx-auto text-4xl text-yellow-400 mb-4 aboutme-icon" />
-            <h3 className="text-2xl font-semibold">Reconocimientos</h3>
+            <h3 className="text-2xl font-semibold">Enfoque</h3>
             <p className="text-md mt-2">
-              Premio &quot;Entrenadora del Año 2022&quot;. Embajadora fitness internacional.
+            Combinar ciencia, aprendizaje autodidacta y experiencia para perder grasa y ganar músculo
             </p>
           </div>
 
           <div className="text-center p-6 bg-black bg-opacity-70 rounded-lg shadow-lg aboutme-card h-full flex flex-col justify-between">
             <FaHeartbeat className="mx-auto text-4xl text-yellow-400 mb-4 aboutme-icon" />
-            <h3 className="text-2xl font-semibold">Valores</h3>
+            <h3 className="text-2xl font-semibold">La Fórmula</h3>
             <p className="text-md mt-2">
-              Compromiso, innovación y disciplina en cada entrenamiento.
+              Me formé en nutrición y desarrollé métodos propios para transformar cuerpos, creando hábitos que cambian vidas
             </p>
           </div>
         </div>
@@ -172,12 +173,11 @@ const AboutMe = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
           <div className="space-y-6">
             <div className=' mb-10 text-center lg:text-left'>
-              <h3 className="text-3xl font-semibold mb-4 text-yellow-400">
+              <h3 className="text-3xl font-bold mb-4 text-yellow-400">
                 Mi motivación
               </h3>
               <p className="text-lg">
-                Ayudar a las personas a descubrir su mejor versión. Crear hábitos
-                saludables para toda la vida, no solo a corto plazo.
+              Prepárarte para un cambio que trascienda lo físico. Aquí comienza tu camino hacia una transformación integral, donde mente y cuerpo trabajan en armonía
               </p>
               {/* Llamado a la acción */}
               <div className="text-center my-12 block lg:hidden">
@@ -190,20 +190,18 @@ const AboutMe = () => {
             <div className="block lg:flex space-y-6 lg:space-y-0 lg:space-x-6">
               {/* Misión */}
               <div className="bg-black bg-opacity-70 rounded-lg p-6 shadow-lg text-center flex flex-col items-center justify-center w-full lg:w-1/2 aboutme-card">
-                <h3 className="text-3xl font-bold text-yellow-400 mb-2">Misión</h3>
+                <h3 className="text-3xl font-semibold text-yellow-400 mb-2">Filosofía</h3>
                 <p className="text-md text-center mb-4">
-                  Transformar vidas a través del fitness, ofreciendo programas
-                  adaptados a cada cliente.
+                Como entrenadora y exprofesora de música, valoro la conexión humana, la pasión y la disciplina, transmitiéndolas en cada sesión de entrenamiento
                 </p>
                 <FaBullseye className="text-yellow-400 text-4xl" />
               </div>
 
               {/* Visión */}
               <div className="bg-black bg-opacity-70 rounded-lg p-6 shadow-lg text-center flex flex-col items-center justify-center w-full lg:w-1/2 aboutme-card">
-                <h3 className="text-3xl font-bold text-yellow-400 mb-2">Visión</h3>
+                <h3 className="text-3xl font-semibold text-yellow-400 mb-2">Visión</h3>
                 <p className="text-md text-center mb-4">
-                  Ser líder en el mundo del fitness, inspirando a miles de personas
-                  a alcanzar su máximo potencial.
+                Mi misión es guiarte para que encuentres en el entrenamiento la fuerza y la liberación que te empoderen para superar cualquier límite
                 </p>
                 <FaEye className="text-yellow-400 text-4xl" />
               </div>

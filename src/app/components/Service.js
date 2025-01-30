@@ -1,6 +1,6 @@
 'use client';
 
-import { FaDumbbell, FaRunning, FaHeartbeat, FaAppleAlt, FaSpa } from 'react-icons/fa';
+import { FaDumbbell, FaRunning, FaHeartbeat, FaAppleAlt, FaSpa, FaBook } from 'react-icons/fa';
 import { useEffect, useRef, useState } from 'react';
 
 const Service = () => {
@@ -49,7 +49,7 @@ const Service = () => {
         <div className={`col-span-6 md:col-span-2 text-center md:text-left ${isVisible ? 'service-animate-fadeIn' : 'service-hidden'}`} style={{ animationDelay: '0ms' }}>
             <h2 className="text-3xl lg:text-4xl italic font-bold text-gray-900 mb-4 font-[family-name:var(--font-Milker-Regular)]">Servicios</h2>
             <p className="text-lg text-gray-600 mb-8">
-                Entrenamientos personalizados que transformarán tu cuerpo y mente. Vive una experiencia única con Caster Team.
+                Entrenamientos personalizados que transformarán tu cuerpo y mente. Vive una experiencia única con Caster Team, tu instructora personal.
             </p>
             <div className="flex justify-center md:justify-start">
                 <img 
@@ -60,10 +60,10 @@ const Service = () => {
                 />
             </div>
             <div className="relative flex justify-center lg:justify-start mt-8 mb-5">
-                <button className="cta-button" onClick={handleScroll}>
-                Descubre nuestros planes
+                <button className="cta-buttonSecundario" onClick={handleScroll}>
+                Ebooks y plan de entrenamiento
                 </button>
-                <div className="pulse-container">
+                <div className="pulse-containerSecundario">
                     <div className="hidden lg:flex  pulse pulse--1"></div>
                     <div className="hidden lg:flex pulse pulse--2"></div>
                     <div className="hidden lg:flex pulse pulse--3"></div>
@@ -82,9 +82,9 @@ const Service = () => {
 
           {/* Tarjeta 2 */}
           <div className={`col-span-6 md:col-span-2 card bg-[#FFD700] p-6 rounded-lg shadow-lg ${isVisible ? 'service-animate-fadeIn' : 'service-hidden'}`} style={{ animationDelay: '700ms' }}>
-            <FaRunning className="text-4xl text-white mb-4" />
-            <h3 className="text-2xl font-semibold text-gray-800 mb-2">Cardio Intenso</h3>
-            <p className="text-gray-800">Aumenta tu resistencia cardiovascular con rutinas de alta intensidad.</p>
+            <FaBook className="text-4xl text-white mb-4" />
+            <h3 className="text-2xl font-semibold text-gray-800 mb-2">E-books</h3>
+            <p className="text-gray-800">guías prácticas para transformar tu cuerpo, mejorar tu alimentación y alcanzar tus metas.</p>
           </div>
 
           {/* Tarjeta 3 */}

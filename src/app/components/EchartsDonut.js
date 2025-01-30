@@ -46,7 +46,7 @@ const EchartsDonut = ({ data }) => {
       key={index}
       className={`relative flex items-center justify-center mb-6 lg:mb-0 ${
         index === 4
-          ? 'h-[100px] w-[100px] lg:h-[150px] lg:w-[150px]'
+          ? 'h-[100px] w-[100px] lg:h-[150px] lg:w-[150px] mt-8 lg:mt-0'
           : 'h-[80px] w-[80px] lg:h-[110px] lg:w-[110px]'
       }`}
     >
@@ -65,12 +65,12 @@ const EchartsDonut = ({ data }) => {
       <span className="absolute bottom-[-15px] left-1/2 transform -translate-x-1/2 text-xs lg:text-base font-medium text-white">
         {item.name}
       </span>
-      <span className="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 text-[10px] lg:text-sm font-normal text-white w-full">
+      <span className="absolute bottom-[-35px] left-1/2 transform -translate-x-1/2 text-[10px] lg:text-sm font-normal text-white w-full">
         {item.name === 'Total'
           ? `Calorías: -${totalCalories}`
           : `Calorías: -${item.calories}`}
       </span>
-      <span className="absolute bottom-[-45px] left-1/2 transform -translate-x-1/2 text-[9px] lg:text-xs font-normal text-white w-full">
+      <span className="absolute bottom-[-55px] left-1/2 transform -translate-x-1/2 text-[9px] lg:text-xs font-normal text-white w-full">
         {item.name === 'Total'
           ? `Minutos: ${totalMinutes}`
           : `Minutos: ${item.minutes}`}

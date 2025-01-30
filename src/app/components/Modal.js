@@ -4,7 +4,36 @@ import EchartsDonut from "./EchartsDonut";
 import { FaRunning, FaSwimmer, FaDumbbell, FaPray, FaHotjar } from 'react-icons/fa';
 
 
-const Modal = ({ isOpen, onClose, planName, data }) => {
+const Modal = ({ isOpen, onClose, planName}) => {
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    const formData = {
+      nombre: e.target.nombre.value,
+      correo: e.target.correo.value,
+      plan: e.target.plan.value,
+    };
+  
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+  
+      if (response.ok) {
+        alert("Correo enviado exitosamente");
+      } else {
+        const errorData = await response.json();
+        alert(`Error: ${errorData.error || "Error desconocido"}`);
+      }
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error);
+      alert("Error al enviar el formulario.");
+    }
+  };
+  
   
   return (
     <Dialog
@@ -32,20 +61,27 @@ const Modal = ({ isOpen, onClose, planName, data }) => {
           Tu cuerpo y mente están listos para el cambio. ¡Empieza hoy mismo!
         </p>
         <div className="flex justify-center">
-          <form className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 p-6 shadow-md rounded-md w-full lg:w-auto">
+          <form 
+            onSubmit={handleSubmit}
+            className="z-20 flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 p-6 w-full lg:w-auto"
+          >
             <input
               type="text"
               name="nombre"
               placeholder="Nombre"
-              className="w-full sm:w-auto px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+              className="w-full sm:w-auto px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-yellow-500"
             />
             <input
               type="email"
               name="correo"
               placeholder="Correo"
-              className="w-full sm:w-auto px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+              className="w-full sm:w-auto px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-yellow-500"
             />
-            <input type="hidden" name="plan" value="{props.plan}" />
+            <input 
+              type="hidden" 
+              name="plan" 
+              value={planName} 
+            />
             <button
               type="submit"
               className="px-6 py-2 bg-yellow-400 text-black font-semibold rounded-md hover:bg-yellow-600 focus:outline-none"
@@ -54,11 +90,6 @@ const Modal = ({ isOpen, onClose, planName, data }) => {
             </button>
           </form>
         </div>
-
-        {/* Gráficos */}
-        <EchartsDonut
-          data={data}
-        />
 
       </DialogPanel>
     </Dialog>

@@ -134,7 +134,7 @@ export default function Navbar() {
 
         {/* Menú con Animación (superpuesto sobre la imagen) */}
         <a
-          href="#services"
+          href="#serviceCaster"
           className={`text-3xl text-black font-semibold mb-6 z-10 opacity-0 transition-opacity duration-500 delay-[200ms] font-[family-name:var(--font-Montserrat-Wght)] ${
             isOpen ? "opacity-100" : ""
           } relative group`}
@@ -144,7 +144,7 @@ export default function Navbar() {
           <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
         </a>
         <a
-          href="#about"
+          href="#aboutMeCaster"
           className={`text-3xl text-black font-semibold mb-6 z-10 opacity-0 transition-opacity duration-500 delay-[300ms] font-[family-name:var(--font-Montserrat-Wght)] ${
             isOpen ? "opacity-100" : ""
           } relative group`}
