@@ -67,7 +67,9 @@ A table:
                     <h2 className="text-2xl font-bold font-[family-name:var(--font-Milker-Regular)] italic mb-3">
                         Comienza <span className="text-yellow-400">ahora</span>
                     </h2>
-                    <ReactMarkdown children={text} remarkPlugins={[remarkGfm]} /> 
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}> 
+                        {text}
+                    </ReactMarkdown>
                 </div>
             </div>
             

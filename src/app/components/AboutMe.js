@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { useEffect } from 'react';
 import { FaDumbbell, FaAward, FaHeartbeat, FaBullseye, FaEye } from 'react-icons/fa';
 
