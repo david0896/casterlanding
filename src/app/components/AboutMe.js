@@ -210,7 +210,7 @@ const AboutMe = () => {
           {/* Imagen principal */}
           <div className="overflow-hidden h-[300px] lg:h-[800px] -mb-12 lg:mb-0">
             <img
-              src="https://lapaulettefitness.com/wp-content/uploads/elementor/thumbs/footer-pmj2lzreop9d3wf5pgea6jfdu7zkvm3uctihr6zmrk.png"
+              src="https://i.postimg.cc/c40pLBV1/entrrenamiento-con-pesas-alterofilia.png"
               alt="Flor Caster Training"
               id="instructoraImg"
               className="rounded-lg shadow-lg w-full"

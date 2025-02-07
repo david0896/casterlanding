@@ -53,7 +53,7 @@ const Service = () => {
             </p>
             <div className="flex justify-center md:justify-start">
                 <img 
-                src="https://i0.wp.com/lifegym.fit/wp-content/uploads/2023/04/about-3-16.png?w=629&ssl=1" 
+                src="https://i.postimg.cc/J75phVNv/instructora-fitnes-flor-caster.png" 
                 alt="Flor Caster" 
                 className={`${isVisible ? 'service-animate-fadeIn' : 'service-hidden'}`} 
                 style={{ animationDelay: '300ms' }}

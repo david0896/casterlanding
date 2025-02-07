@@ -86,13 +86,13 @@ const ContactMe = () => {
         <div className={`${isVisible ? 'contact-animate-fadeIn' : 'contact-hidden'}`}>
           <div className="flex items-center mb-4">
             <i className="fas fa-phone-alt mr-3 text-gray-600"></i>
-            <span className="text-lg">+123 456 7890</span>
+            <span className="text-lg">+542995783793</span>
           </div>
           <div className="flex items-center mb-4">
             <i className="fas fa-envelope mr-3 text-gray-600"></i>
-            <span className="text-lg">instructora@example.com</span>
+            <span className="text-lg">Florcasterr@gmail.com</span>
           </div>
-          <div className="flex items-center mb-4">
+          <div className="items-center mb-4 hidden">
             <i className="fas fa-map-marker-alt mr-3 text-gray-600"></i>
             <span className="text-lg">Ubicación: Calle 123, Ciudad</span>
           </div>

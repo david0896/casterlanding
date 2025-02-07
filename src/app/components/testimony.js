@@ -1,42 +1,23 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+const avatar = "https://i.postimg.cc/5tLCmrVL/usuario.png"
 
 const testimonies = [
   {
-    name: "John Doe",
-    text: "This gym changed my life! The trainers are amazing, and the environment is so motivating.",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    name: "Macca Figueroa",
+    text: "Decidí ir por el cambio, este cambio de volver a sentirme bien, no hubiera podido sin la ayuda de vos Flor Caster.",
+    image: avatar,
   },
   {
-    name: "Jane Smith",
-    text: "Great experience! The workouts are tough, but I love every minute of it. Highly recommend!",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    name: "Gym-goer",
+    text: "Me motivo a seguir y a no abandonar en ningun momento, ademas me hizo creer en los cambios grosos y a tener buenos habitos.",
+    image: avatar,
   },
   {
-    name: "Paul Johnson",
-    text: "Excellent trainers and a motivating environment. I'm in the best shape of my life!",
-    image: "https://randomuser.me/api/portraits/men/45.jpg",
-  },
-  {
-    name: "Emily Brown",
-    text: "Friendly staff and the best workout routines. Highly recommend for anyone looking to get fit.",
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
-  },
-  {
-    name: "Mike Wilson",
-    text: "I love the flexible schedules and the personal attention I get from the instructors.",
-    image: "https://randomuser.me/api/portraits/men/22.jpg",
-  },
-  {
-    name: "Sophie Taylor",
-    text: "The perfect place to stay fit and healthy. Great instructors and workout plans.",
-    image: "https://randomuser.me/api/portraits/women/31.jpg",
-  },
-  {
-    name: "Chris Green",
-    text: "The support and guidance I've received here is exceptional. It has truly been life-changing!",
-    image: "https://randomuser.me/api/portraits/men/16.jpg",
+    name: "Gym-goer",
+    text: "Los resultados se ven aunque en mi cuesta un poco, el bajar practicamente 10kg es más que una motivación para mi.",
+    image: avatar,
   },
 ];
 

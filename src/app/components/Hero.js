@@ -5,6 +5,7 @@ import Image from 'next/image';
 import SvgComponent from './SvgComponent';
 
 export default function Hero() {
+  /* https://static.wixstatic.com/media/53a3ab_bf957264d4d5458685f0cf125ca825cb~mv2.png/v1/fill/w_874,h_1090,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/gym-woman-cutout.png  */
   const handleScroll = (e) => {
     e.preventDefault();
     const destination = document.getElementById("servicePlan");
@@ -72,7 +73,7 @@ export default function Hero() {
                         <div className="flex justify-center md:justify-end">
                             <img
                                 id='heroimg'
-                                src="https://static.wixstatic.com/media/53a3ab_bf957264d4d5458685f0cf125ca825cb~mv2.png/v1/fill/w_874,h_1090,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/gym-woman-cutout.png"
+                                src="https://i.postimg.cc/bNmmfD6S/fllocasterinstructora.png" 
                                 alt="Fitness Woman"
                                 className="max-w-full h-auto w-3/4"
                             />
