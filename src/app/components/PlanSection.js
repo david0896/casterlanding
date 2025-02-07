@@ -187,8 +187,8 @@ const ebookDos = `
               </li>
             </ul>
             <span className="text-5xl font-bold text-yellow-400 mb-4">$99,9/mes</span>
-            <button className="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-300 transition" onClick={() => {openModal(), setPlanName("Plan personalizado")}}>
-              Comprar Plan Premium
+            <button className="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-300 transition" onClick={() => {openModal(), setPlanName("Plan personalizado 1:1")}}>
+              Adquirir asesoria 1:1
             </button>
           </div>
         </div>
